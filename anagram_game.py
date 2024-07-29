@@ -25,20 +25,21 @@ if category in dict:
 else:
    print("Invalid category. Please enter 'words' or 'phrases'.")
 
-def choose_word_or_phrase(category)
-"""The function will choose a random element from the selected category"""
-elements=list(dict[category].keys())
-# The key() shows all the elements in a specific category
-# To access an element of dict we use square brackets
-random_element=random.choice(elements)
-return random_element
+def choose_word_or_phrase(category):
+    """The function will choose a random element from the selected category"""
+    elements=list(dict[category].keys())
+    # The key() shows all the elements in a specific category
+    # To access an element of dict we use square brackets
+    random_element=random.choice(elements)
+    return random_element
 
-def shuffle(random_element)
-letters=list(random_element)
-random.shuffle(letters)
-shuffled=''.join(letters)
-#join() converts list back to string
-return shuffled
+def shuffle(random_element):
+    letters=list(random_element)
+    random.shuffle(letters)
+    shuffled=''.join(letters)
+    #join() converts list back to string
+    return shuffled
+  
 
 
 
