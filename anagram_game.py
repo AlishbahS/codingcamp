@@ -20,11 +20,7 @@ dict = {
 
 #Get a category(words/phrases) as input from user
 category= input("Enter a category(words/phrases) :").strip().lower()
-# Check if the category is valid and display the corresponding data
-if category == "words" or category == "phrases":
-    return
-else:
-    print("Invalid category. Please enter 'words' or 'phrases'.")
+
 
 
   
