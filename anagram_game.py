@@ -20,6 +20,10 @@ dict = {
 
 #Get a category(words/phrases) as input from user
 category= input("Enter a category(words/phrases) :").strip().lower()
+if category in dict:
+            print(f"Category selected: {category}") 
+        else:
+            print("Invalid category. Please enter 'words' or 'phrases'.")
 
 
 
