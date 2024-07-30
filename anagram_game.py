@@ -33,13 +33,25 @@ def choose_word_or_phrase(category):
     random_element=random.choice(elements)
     return random_element
 
-def shuffle(random_element):
-    letters=list(random_element)
-    random.shuffle(letters)
-    shuffled=''.join(letters)
-    #join() converts list back to string
-    return shuffled
-  
+random_element=choose_word_or_phrase(category)
+shuffled = shuffle(random_element)
+
+attempts=3
+while attempts!=0:
+      print("the word is",shuffled)
+
+guess="enter your guess:  ".lower().strip()
+    
+    if guess == random_element:
+        print("Congratulations! You guessed it right.")
+        break
+
+    else:
+        attempts -= 1
+        if attempts > 0:
+            print(f"Wrong guess. You have {attempts} attempts left.")
+        else:
+            print(f"Sorry, you're out of attempts. The correct answer was '{random_element}'.")
 
 
 
