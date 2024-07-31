@@ -5,7 +5,7 @@ dict = {
     "words": {
         "strawberry": "a fruit",
         "butterfly": "an insect",
-        "milkshake": "a beverage",
+        "coffee": "a beverage",
         "leopard": "an animal",
         "jacket": "a piece of clothing",
     },
@@ -46,14 +46,14 @@ def main():
     random_element=choose_word_or_phrase(category)
     shuffled=shuffle(random_element)
 
-    print(f"Solve {shuffled}")
+    print(f"\nSolve: {shuffled}")
     hint=dict[category][random_element]
     print(f"Hint: {hint}")
-
+    print("\nYou will get 3 attempts")
 
     #to check if guess is correct or incorrect
     for attempt in range(1,4):
-        guess=input("Enter your guess: ").strip().lower()   
+        guess=input("\nEnter your guess: ").strip().lower()   
         if guess==random_element:
             print("Welldone!You guessed correct.")
             restart_()
@@ -66,7 +66,8 @@ def main():
         if attempt_left>0:
             print (f"You have {attempt_left} attempts left")
         else:
-                print (f"Out of attempts!The correct answer was {random_element}")
+            print (f"Out of attempts! The correct answer was {random_element}.")
+            restart_()
 
 #restart the solver
 def restart_():
