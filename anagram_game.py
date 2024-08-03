@@ -1,5 +1,10 @@
 import random
 
+# Displaying the heading
+print("="*50)
+print("ANAGRAM SOLVER".center(50))
+print("="*50)
+
 # Creating a dictionary with words and phrases
 dict = {
     "words": {
@@ -20,7 +25,6 @@ dict = {
 
 # Chooses random word or phrase from selected category
 def choose_word_or_phrase(category):
-    """The function will choose a random element from the selected category"""
     elements = list(dict[category].keys())
     random_element = random.choice(elements)
     return random_element
@@ -39,13 +43,14 @@ def shuffle(random_element):
 
 # Asks the user for a hint
 def hint_(hint):
-    ask_hint = input("\nDo you want a hint? (yes/no): ").strip().lower()
+    ask_hint = input("\nYou have one hint. Do you want to use it? (yes/no): ").strip().lower()
     if ask_hint == "yes":
         print(f"Hint: {hint}")
         return True
-    elif ask_hint == "no":
+    elif ask_hint == "no": 
         return False
     else:
+        print("Invalid answer")
         return hint_(hint)
 
 #  Restarts the solver
@@ -63,7 +68,7 @@ def restart_():
 def main():
     """This is the main game loop"""
     while True:
-        category = input("Enter a category (words/phrases): ").strip().lower()
+        category = input("\nEnter a category (words/phrases): ").strip().lower()
 
         # Checks if user has entered valid category
         if category in dict:
@@ -104,6 +109,10 @@ def main():
 
 # Starts the solver      
 main()
+
+    
+            
+          
 
 
     
