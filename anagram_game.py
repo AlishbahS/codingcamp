@@ -98,7 +98,7 @@ def main():
                     # Checks the number of attempts left
                     if attempt_left > 0:
                         print(f"You have {attempt_left} attempts left")
-                        if not hint_taken:
+                        if hint_taken == False:
                             hint_taken = hint_(hint)
                     else:
                         print(f"Out of attempts! The correct answer was {random_element}.")
